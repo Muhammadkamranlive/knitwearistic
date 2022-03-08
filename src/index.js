@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import reportWebVitals from './reportWebVitals';
+if (localStorage.getItem('mode') === 'dark')
+{
+  require('./Dark.css');
+} else
+{
+  require ('./index.css'); 
+}
 
 ReactDOM.render(
   <React.StrictMode>
